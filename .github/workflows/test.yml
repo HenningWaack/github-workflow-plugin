@@ -1,6 +1,8 @@
 name: test.yml
 on:
   workflow_dispatch:
+env:
+  TEST_ENV_VAR: "test env value"
 
 jobs:
     test:
@@ -12,6 +14,12 @@ jobs:
     test2:
       environment: DEV
       runs-on: ubuntu-latest
-      name: test ${{ vars.TEST_VAR }}
+      name: "test ${{ vars.TEST_VAR }}"
+      steps:
+        - run: echo "test"
+    test3:
+      environment: DEV
+      runs-on: ubuntu-latest
+      name: "test ${{ env.TEST_ENV_VAR }}"
       steps:
         - run: echo "test"
