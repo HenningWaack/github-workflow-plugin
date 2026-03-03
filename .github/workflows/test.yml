@@ -1,0 +1,10 @@
+name: test.yml
+on:
+  workflow_dispatch:
+
+jobs:
+    test:
+      runs-on: ubuntu-latest
+      name: test
+      steps:
+        - run: echo "test"
