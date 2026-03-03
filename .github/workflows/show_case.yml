@@ -22,9 +22,11 @@ on:
       input_1:
         type: string
         description: "Alternative"
+        default: input1
       input_2:
         type: string
         description: "Input Description 2"
+        default: input2
 
 env:
   day: "monday"
