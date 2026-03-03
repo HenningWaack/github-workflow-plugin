@@ -15,6 +15,7 @@ jobs:
 
   testUI:
     runs-on: ${{ matrix.os }}
+    name: This is a test job for UI tests on
     strategy:
       fail-fast: false
       matrix:
