@@ -14,12 +14,6 @@ jobs:
     test2:
       environment: DEV
       runs-on: ubuntu-latest
-      name: "test ${{ vars.TEST_VAR }}"
-      steps:
-        - run: echo "test"
-    test3:
-      environment: DEV
-      runs-on: ubuntu-latest
-      name: "test ${{ env.TEST_ENV_VAR }}"
+      name: "test ${{  env.TEST_ENV_VAR }}"
       steps:
         - run: echo "test"
